@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
+import Select from 'react-select'
 import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
@@ -18,6 +19,16 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
+        <Select
+            options={[
+                { label: "Cat", value: "Cat" },
+                { label: "Dog", value: "Dog" },
+                { label: "Bird", value: "Bird" }
+            ]}
+            value={{ label: "Bird", value: "Bird" }}
+            instanceId="instance-id"
+            inputId="blah"
+        />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
